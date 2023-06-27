@@ -1,0 +1,41 @@
+h1 h2 h3 h4 h5 h6 {
+    margin: 15px;
+}
+
+.nav-style {
+    height: 60px;
+}
+
+.nav li {
+    height: 100%;
+    display: block;
+    line-height: 40px;
+}
+
+.nav li a {
+    color:blue;
+}
+
+.container {
+    margin: 30px;
+}
+
+.rounded-search {
+    border-width: 1px;
+    border-radius: 25px;
+    width: 500px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.btn-google {
+    background-color:#efefef;
+}
+
+.adv-search {
+    color:firebrick;
+}
+
+.small-text {
+    font-size: 12px;
+}

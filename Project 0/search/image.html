@@ -10,25 +10,23 @@
     <body>
         <ul class="nav nav-style">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="image.html">Google Image Search</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="advanced.html">Google Advance Search</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Google Search</a>
             </li>
         </ul>    
         <div class="container">
             <div class="text-center">
                 <div class="mb-4">
-                    <h1>Google</h1>
+                    <h2>Google Image</h2>
                 </div>
                 <form action="https://google.com/search">
                     <div class="mb-4">
-                        <input type="text" class="rounded-search" name="q">
+                        <input type="hidden" name="tbm" value="isch">
+                        <input class="rounded-search" type="text" name="q">     
                     </div>
                     <div>
-                        <input type="submit" class="btn btn-google btn-sm" value="Google Search">
-                        <input type="submit" class="btn btn-google btn-sm" name="btnI" value="I'm Feeling Lucky">
+                        <input class="btn btn-google btn-sm" type="submit" value="Google Search">
                     </div>
+                
                 </form>
             </div>
         </div>
