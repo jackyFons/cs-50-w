@@ -1,0 +1,24 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+        <div class="element-container">
+            <h4 class="text-center">New Post</h4>
+            <form action="{% url 'new_post' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input id="post-body" name="post-body" class="form-control" placeholder="Share your thoughts!">
+                </div>
+                <div class="form-group pt-1">
+                    <input id="post-btn" type="submit" class="btn btn-outline-primary" value="Post" disabled/>
+                </div>
+            </form>
+        </div>
+    {% endif %}
+
+    <div class="all_posts">
+        <h4 class="text-center">All Posts</h4>
+        {% include "network/all_posts.html" %}
+    </div>
+{% endblock %}

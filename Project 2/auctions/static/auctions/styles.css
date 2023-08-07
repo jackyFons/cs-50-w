@@ -1,0 +1,47 @@
+body {
+    padding: 10px;
+}
+
+.header {
+    margin-bottom: 15px;
+}
+
+.required {
+    color: red !important;
+}
+
+.btn-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.info-container {
+    padding:20px;
+}
+
+.listing-container {
+    display: block;
+    padding: 50px;
+    width: 500px !important;
+    height: 500px !important;
+    position: absolute;
+}
+
+.img-fit {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.space {
+    margin-top: 50px;
+}
+
+.user {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.amount {
+    width: 100px;
+}

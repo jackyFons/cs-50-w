@@ -1,0 +1,52 @@
+textarea {
+    min-height: 400px;
+}
+
+.left-space {
+    padding-left: 25%;
+}
+
+.email-div {
+    border: ridge black 3px;
+    background-color: inherit;
+    padding: 10px;
+    margin: 5px;
+}
+
+.email-div.unread {
+    background-color: snow;
+}
+
+.email-div.read {
+    background-color: gainsboro;
+}
+
+.btn-container {
+    margin: 5px;
+    padding: 5px;
+}
+
+.body-container {
+    border: ridge lightsteelblue 3px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.body-padding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.preview-sender {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.preview-subject {
+    font-size: 12px;
+}
+
+.preview-timestamp {
+    font-weight: light;
+    font-size: 10px;
+}

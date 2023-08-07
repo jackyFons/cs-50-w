@@ -1,0 +1,25 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h4 class="text-center">{{p_user}}</h4>
+    <div class="follow-container text-center">
+        <span>Following: {{following_count}}</span>
+        <span>Followers: {{follower_count}}</span>
+        {% if user != p_user %}
+            <form action="{% url 'view_profile' username=p_user %}" method="post">
+                {% csrf_token %}
+                <button name="follow-btn" class="btn btn-outline-primary"
+                  {% if follow %}
+                      value="unfollow">Unfollow
+                  {% else %}
+                      value="follow">Follow
+                  {% endif %}
+                </button>
+            </form>
+        {% endif %}
+    </div>
+    {% include "network/all_posts.html" %}
+{% endblock %}
+
+<script  type="module" src="{% static 'network/js/follows.js'%}"></script>

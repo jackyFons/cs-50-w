@@ -1,0 +1,50 @@
+{% load static %}
+
+<div id="posts" class="element-container">
+    {% for post in posts %}
+        <ul class="post" data-id="{{post.id}}">
+            <a href="{% url 'view_profile' username=post.poster.username %}">
+                <li id="poster-{{post.id}}" class="poster item">{{post.poster}}</li>
+            </a>
+            <li class="content item">
+                <div id="content-area">{{post.content}}</div>
+                <input id="edit-area" class="form-control" hidden>
+            </li>
+            <li class="row item">
+                <small class="timestamp pr-5">{{post.timestamp}}</small>
+                    <span class="pl-5">
+                        {% if user.is_authenticated %}
+                            <img id="like-button" class="heart-btn" data-id="{{post.id}}"
+                                {% if user in post.liked_by.all %}
+                                    src="{% static 'network/liked.png' %}"
+                                {% else %}
+                                    src="{% static 'network/unliked.png' %}"
+                                {% endif %}
+                            >
+                        {% endif %}
+                    </span>
+                <span class="pr-5" id="likes-count-{{post.id}}">{{post.likes_count}}</span>
+                {% if user == post.poster %}
+                    <span id="btn-container" class="pl-5 pr-5">
+                        <button class="btn btn-outline-info btn-sm" id="edit-btn">Edit</button>
+                        <button class="btn btn-outline-info btn-sm" id="cancel-btn" hidden>Cancel</button>
+                        <button class="btn btn-outline-info btn-sm" id="save-btn" hidden>Save</button>
+                    </span>
+                {% endif %}
+            </li>
+        </ul>
+    {% endfor %}
+
+    <span style="display:block" class="btn-container">
+        {% if posts.has_next %}
+            <a class="btn btn-outline-primary" style="float: right" href="?page={{ posts.next_page_number }}">Next</a>
+        {% endif %}
+
+        {% if posts.has_previous %}
+            <a class="btn btn-outline-primary" style="float: left" href="?page={{ posts.previous_page_number }}">Previous</a>
+        {% endif %}
+    </span>
+</div>
+<div class="footer-sp"></div>
+
+<script type="module" src="{% static 'network/js/posts.js'%}"></script>

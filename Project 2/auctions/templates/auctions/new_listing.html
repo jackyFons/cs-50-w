@@ -1,0 +1,30 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="listing">
+        <h3 class="header">New Auction Listing</h3>
+        <p class="offset-6"><b><span class="required">*</span> required</b></p>
+        <form action="{% url 'new_listing' %}" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group row">
+                    <div class="col-1">
+                        {% if field.name == "url" or field.name == "category" %}
+                            <label>{{ field.help_text }}</label>
+                        {% else %}
+                            <label>{{ field.help_text }}
+                                <span class="required">*</span>
+                            </label>
+                        {% endif %}
+                    </div>
+                    <div class="col-4">
+                        {{ field }}
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="form-group">
+                <input type="submit" class="btn btn-outline-primary" value="Create">
+            </div>
+        </form>
+    </div>
+{% endblock %}

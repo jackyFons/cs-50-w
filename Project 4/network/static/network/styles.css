@@ -1,0 +1,52 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 20px !important;
+    font-family: "Arial Black";
+}
+
+
+.element-container {
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.post {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: ridge 3px gainsboro;
+}
+
+.poster {
+    font-size: 20px;
+    font-weight: bold;
+    color: teal;
+}
+
+.content {
+    margin: 10px;
+}
+
+.item {
+    list-style-type: none;
+}
+
+.timestamp {
+    margin-left: 30px;
+    color: grey;
+}
+
+.heart-btn {
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.follow-container {
+    margin: 20px 50px !important;
+}
+
+.footer-sp {
+    margin: 100px;
+}
+
+.header-sp {
+    margin-top: 50px;
+}
