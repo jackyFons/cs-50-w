@@ -1,5 +1,5 @@
 # Project 1
-This project designs Design a Wikipedia-like online encyclopedia.
+This project designs a Wikipedia-like online encyclopedia.
 
 [Link to Harvard website with more information.](https://cs50.harvard.edu/web/2020/projects/1/wiki/)
 
